@@ -1,2 +1,3 @@
-# sec-companies
-This is a simple JSON API for working with SEC companies.
+# SEC Companies
+
+This is a simple JSON API for accessing the SEC companies.

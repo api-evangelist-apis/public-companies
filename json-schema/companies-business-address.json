@@ -1,0 +1,43 @@
+{
+    "$id": "https://sec.companies.apievangelist.com/companies-business-address.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "title": "companies_business_address",
+        "description": "The business address for a company.",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "maxLength": 11
+            },
+            "CIK": {
+                "type": "integer",
+                "maxLength": 11
+            },
+            "street": {
+                "type": "string",
+                "maxLength": 500
+            },
+            "city": {
+                "type": "string",
+                "maxLength": 250
+            },
+            "state": {
+                "type": "string",
+                "maxLength": 10
+            },
+            "zipCode": {
+                "type": "string",
+                "maxLength": 25
+            },
+            "phoneNumber": {
+                "type": "string",
+                "maxLength": 10
+            }
+        },
+        "required": [
+            "id"
+        ]
+    }
+}

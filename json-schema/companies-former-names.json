@@ -1,0 +1,31 @@
+{
+    "$id": "https://sec.companies.apievangelist.com/companies-former-names.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "title": "companies_former_names",
+        "description": "Former names for the company.",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "maxLength": 11
+            },
+            "CIK": {
+                "type": "integer",
+                "maxLength": 11
+            },
+            "date_used": {
+                "type": "string",
+                "maxLength": 50
+            },
+            "name": {
+                "type": "string",
+                "maxLength": 250
+            }
+        },
+        "required": [
+            "id"
+        ]
+    }
+}
