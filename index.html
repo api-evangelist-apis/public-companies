@@ -63,22 +63,19 @@ title: SEC Companies
             <p>{{ description }}</p>
             <p><strong>URL:</strong> {{ api_url }}{{ path[0] }}</p>
 
-            <center>
-              <hr />
-              <table cellpadding"3" cellspacing="2">
-                  <tr>
-                    <td align="right" width="25%">x-api-key:</td>
-                    <td><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
-                  </tr>
-              </table>
-              <hr />
-            </center>
+            <h4>Authentication:</h4>
+            <table cellpadding"3" cellspacing="2">
+                <tr>
+                  <td align="right" width="25%">x-api-key:</td>
+                  <td><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
+                </tr>
+            </table>
 
             <form id="{{ slug }}-path" style="width: 100%;">
               {% assign any_path_parameters = 0 %}
               {% for parameter in parameters %}{% if parameter.in == 'path' %}{% assign any_path_parameters = 1 %}{% endif %}{% endfor %}
               {% if any_path_parameters == 1 %}
-                <strong>Path Parameters:</strong>
+                <h4>Path Parameters:</h4>
               {% endif %}
               <table cellpadding"3">
               {% for parameter in parameters %}
@@ -92,12 +89,11 @@ title: SEC Companies
               {% endfor %}
               </table>
             </form>
-            <br />
             <form id="{{ slug }}-param" style="width: 100%;">
               {% assign any_path_parameters = 0 %}
               {% for parameter in parameters %}{% if parameter.in == 'query' %}{% assign any_path_parameters = 1 %}{% endif %}{% endfor %}
-              {% if any_path_parameters == 1 %}
-                <strong>Query Parameters:</strong>
+              {% if any_path_parameters h4 1 %}
+                <h4>Query Parameters:</strong>
               {% endif %}
               <table cellpadding"3">
               {% for parameter in parameters %}
