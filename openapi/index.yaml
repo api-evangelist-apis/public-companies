@@ -1,4 +1,4 @@
-cikswagger: '2.0'
+swagger: '2.0'
 info:
   title: "Public Companies"
   description: "This is an API for access companies listed by the SEC which have a CIK and industry classification."
