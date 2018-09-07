@@ -57,8 +57,8 @@ paths:
       tags:
       - Companies
     post:
-      summary: Companies summary.
-      description: Companies description
+      summary: Add Company
+      description: Add a new company to the database.
       operationId: companiesOperation
       parameters:
         - in: body
@@ -91,7 +91,7 @@ paths:
   /companies/{cik}/:
     get:
       summary: Get Company
-      description: Get a singe company.
+      description: Get a single company record.
       operationId: getCompany
       parameters:
         - in: path
@@ -118,7 +118,7 @@ paths:
       - Companies
     put:
       summary: Update Company
-      description: Update the company information.
+      description: Update the company record.
       operationId: updateCompany
       parameters:
         - in: path
