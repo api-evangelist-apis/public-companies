@@ -21,7 +21,7 @@ paginate_path: "/blog/page:num"
 collections:
   openapi:
     output: true
-    permalink: /collection/:path/
+    permalink: /openapi/:path/
 
 #-------------------------------
 # Current stage of this service
