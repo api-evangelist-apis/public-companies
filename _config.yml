@@ -34,7 +34,7 @@ stage:
 status_values:
   - None
   - Not Used
-  - In Proress
+  - In Progress
   - Active
 
 #---------------------
@@ -117,7 +117,7 @@ stops:
         fields:
           - assertions:
             - title: The title of the assertion
-            - path: /path/of/the/assertion
+              path: /path/of/the/assertion
 
       - name: Team
         description: A list of team members for the service.
