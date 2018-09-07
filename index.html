@@ -53,12 +53,14 @@ title: SEC Companies
           {% assign tag = tagarray[0] %}
           {% assign verb = method[0] | upcase %}
           {% assign summary = method[1].summary %}
+          {% assign description = method[1].description %}
 
           {% if tag == grouptag %}
 
             {% assign slug = path[0] | replace: '/','' %}
 
             <h3>{{ summary }}</h3>
+            <p>{{ description }}</p>
 
             <p align="center"><strong>URL:</strong> {{ api_url }}{{ path[0] }}</p>
 
@@ -118,6 +120,8 @@ title: SEC Companies
                 </tr>
             </table>
             </center>
+
+            <hr />
 
           {% endif %}
 
