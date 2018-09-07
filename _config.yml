@@ -19,15 +19,15 @@ paginate_path: "/blog/page:num"
 # YAML Collections
 #---------------------
 collections:
-  openapi:
+  collection:
     output: false
-    permalink: /openapi/:path/
+    permalink: /collection/:path/
 
 defaults:
   - scope:
-      type: openapi
+      type: collection
     values:
-      layout: openapi
+      layout: collection
 
 #-------------------------------
 # Current stage of this service
