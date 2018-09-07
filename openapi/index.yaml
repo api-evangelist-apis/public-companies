@@ -11,8 +11,8 @@ info:
     name: Open Data Commons Public Domain
     url: http://opendatacommons.org/licenses/pddl/
   version: v1.2
-host: public.companies.api.evangelist.com
-basePath: /
+host: ql1rvofpu5.execute-api.us-east-1.amazonaws.com
+basePath: /production
 schemes:
 - http
 produces:
@@ -234,14 +234,14 @@ definitions:
         type: "array"
         items:
           $ref: "#/definitions/business_address"
-      former_names:
-        type: "array"
-        items:
-          $ref: "#/definitions/former_name"
       mailing_addresses:
         type: "array"
         items:
           $ref: "#/definitions/mailing_address"
+      former_names:
+        type: "array"
+        items:
+          $ref: "#/definitions/former_name"
     required:
     - cik
   business_address:
