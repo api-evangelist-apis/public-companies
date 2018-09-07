@@ -55,7 +55,7 @@ paths:
             items:
               $ref: "#/definitions/errorResponse"
       tags:
-      - Tag
+      - Companies
     post:
       summary: Companies summary.
       description: Companies description
@@ -87,7 +87,7 @@ paths:
             items:
               $ref: "#/definitions/errorResponse"
       tags:
-      - Tag
+      - Companies
   /companies/{cik}/:
     get:
       summary: Get Company
@@ -115,7 +115,7 @@ paths:
             items:
               $ref: "#/definitions/errorResponse"
       tags:
-      - Tag
+      - Companies
     put:
       summary: Update Company
       description: Update the company information.
@@ -152,7 +152,7 @@ paths:
             items:
               $ref: "#/definitions/errorResponse"
       tags:
-      - Tag
+      - Companies
     delete:
       summary: Delete Company
       description: Delete a single company.
@@ -185,7 +185,7 @@ paths:
             items:
               $ref: "#/definitions/errorResponse"
       tags:
-      - Tag
+      - Companies
 securityDefinitions:
   api-key:
     type: apiKey
