@@ -26,7 +26,7 @@ collections:
 #-------------------------------
 # Current stage of this service
 #-------------------------------
-stage:
+stage: development
 
 #---------------
 # Status Values
