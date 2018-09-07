@@ -2,8 +2,32 @@
 layout: default
 title: SEC Companies
 ---
-<h1>SEC Companies</h1>
-<p>This is my SEC companies API.</p>
+
+{% assign service_name = "" %}
+{% assign service_description = "" %}
+{% for stop in site.stops %}
+  {% if stop.name == 'Definition' %}
+  {% for item in stop.items %}
+
+    {% if item.name == 'Service Name' %}
+      {% for field in item.fields %}
+        {% assign service_name = field.service_name %}
+      {% endfor %}
+    {% endif %}
+
+    {% if item.name == 'Service Description' %}
+      {% for field in item.fields %}
+        {% assign service_description = field.service_description %}
+      {% endfor %}
+    {% endif %}
+
+  {% endfor %}
+  {% endif %}
+{% endfor %}
+
+
+<h1>{{ service_name }}</h1>
+<p>{{ service_description }}</p>
 
 <!--Documentation-->
 <a name="documentation"></a>
