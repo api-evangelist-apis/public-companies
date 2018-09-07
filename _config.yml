@@ -23,6 +23,12 @@ collections:
     output: true
     permalink: /openapi/:path/
 
+defaults:
+  - scope:
+      type: openapi
+    values:
+      layout: openapi    
+
 #-------------------------------
 # Current stage of this service
 #-------------------------------
