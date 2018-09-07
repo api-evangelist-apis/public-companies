@@ -59,6 +59,476 @@
     	        <h1>SEC Companies</h1>
 <p>This is my SEC companies API.</p>
 
+<!--Documentation-->
+<a name="documentation"></a>
+
+
+<section class="intro-features" id="documentation">
+
+    
+    
+
+    
+    
+
+      
+      
+
+      
+      
+
+      
+      
+
+      
+
+        
+        
+
+        
+
+          
+          
+          
+          
+          
+          
+
+          
+
+        
+
+          
+          
+          
+          
+          
+          
+
+          
+
+        
+
+      
+
+        
+        
+
+        
+
+          
+          
+          
+          
+          
+          
+
+          
+
+        
+
+          
+          
+          
+          
+          
+          
+
+          
+
+        
+
+          
+          
+          
+          
+          
+          
+
+          
+
+        
+
+      
+
+    
+
+      
+      
+
+      
+      
+
+      
+      
+
+      
+
+        
+        
+
+        
+
+          
+          
+          
+          
+          
+          
+
+          
+
+            
+
+            <h3>Search Companies</h3>
+            <p>Search across all of the companies.</p>
+            <p><strong>URL:</strong> <a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/</a></p>
+
+            <h4>Authentication:</h4>
+            <table cellpadding"3" cellspacing="2">
+                <tr>
+                  <td align="right" width="25%">x-api-key:</td>
+                  <td><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
+                </tr>
+            </table>
+
+            <form id="companies-path" style="width: 100%;">
+              
+              
+              
+              <table cellpadding"3">
+              
+                
+              
+                
+              
+                
+              
+              </table>
+            </form>
+            <form id="companies-param" style="width: 100%;">
+              
+              
+              
+                <h4>Query Parameters:</strong>
+              
+              <table cellpadding"3">
+              
+                
+                  <tr>
+                    <td align="right" width="18%" style="padding:5px;">search_name:</td>
+                    <td style="padding:5px;" width="25%"><input type="text" name='search_name' value="" class="form-control" style="width: 100%;"></td>
+                    <td style="padding:5px;"><i>The string to search company name by.</i></td>
+                  </tr>
+                
+              
+                
+                  <tr>
+                    <td align="right" width="18%" style="padding:5px;">search_sic:</td>
+                    <td style="padding:5px;" width="25%"><input type="text" name='search_sic' value="" class="form-control" style="width: 100%;"></td>
+                    <td style="padding:5px;"><i>The string to search SIC code by.</i></td>
+                  </tr>
+                
+              
+                
+                  <tr>
+                    <td align="right" width="18%" style="padding:5px;">search_state:</td>
+                    <td style="padding:5px;" width="25%"><input type="text" name='search_state' value="" class="form-control" style="width: 100%;"></td>
+                    <td style="padding:5px;"><i>The string to search state of incorporation by.</i></td>
+                  </tr>
+                
+              
+              </table>
+            </form>
+
+            <center>
+            <table cellpadding"3" style="margin-top: 10px;">
+                <tr>
+                  <td align="center"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies','/companies/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
+                </tr>
+            </table>
+            </center>
+
+            <hr />
+
+          
+
+        
+
+          
+          
+          
+          
+          
+          
+
+          
+
+            
+
+            <h3>Add Company</h3>
+            <p>Add a new company to the database.</p>
+            <p><strong>URL:</strong> <a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/</a></p>
+
+            <h4>Authentication:</h4>
+            <table cellpadding"3" cellspacing="2">
+                <tr>
+                  <td align="right" width="25%">x-api-key:</td>
+                  <td><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
+                </tr>
+            </table>
+
+            <form id="companies-path" style="width: 100%;">
+              
+              
+              
+              <table cellpadding"3">
+              
+                
+              
+              </table>
+            </form>
+            <form id="companies-param" style="width: 100%;">
+              
+              
+              
+              <table cellpadding"3">
+              
+                
+              
+              </table>
+            </form>
+
+            <center>
+            <table cellpadding"3" style="margin-top: 10px;">
+                <tr>
+                  <td align="center"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies','/companies/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
+                </tr>
+            </table>
+            </center>
+
+            <hr />
+
+          
+
+        
+
+      
+
+        
+        
+
+        
+
+          
+          
+          
+          
+          
+          
+
+          
+
+            
+
+            <h3>Get Company</h3>
+            <p>Get a single company record.</p>
+            <p><strong>URL:</strong> <a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/</a></p>
+
+            <h4>Authentication:</h4>
+            <table cellpadding"3" cellspacing="2">
+                <tr>
+                  <td align="right" width="25%">x-api-key:</td>
+                  <td><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
+                </tr>
+            </table>
+
+            <form id="companies{cik}-path" style="width: 100%;">
+              
+              
+              
+                <h4>Path Parameters:</h4>
+              
+              <table cellpadding"3">
+              
+                
+                  <tr>
+                    <td align="right" width="18%" style="padding:5px;">cik:</td>
+                    <td style="padding:5px;" width="35%"><input type="text" name='cik' value="" class="form-control" style="width: 100%;"></td>
+                    <td style="padding:5px;"><i>The CIK for the company.</i></td>
+                  </tr>
+                
+              
+              </table>
+            </form>
+            <form id="companies{cik}-param" style="width: 100%;">
+              
+              
+              
+              <table cellpadding"3">
+              
+                
+              
+              </table>
+            </form>
+
+            <center>
+            <table cellpadding"3" style="margin-top: 10px;">
+                <tr>
+                  <td align="center"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies{cik}','/companies/{cik}/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
+                </tr>
+            </table>
+            </center>
+
+            <hr />
+
+          
+
+        
+
+          
+          
+          
+          
+          
+          
+
+          
+
+            
+
+            <h3>Update Company</h3>
+            <p>Update the company record.</p>
+            <p><strong>URL:</strong> <a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/</a></p>
+
+            <h4>Authentication:</h4>
+            <table cellpadding"3" cellspacing="2">
+                <tr>
+                  <td align="right" width="25%">x-api-key:</td>
+                  <td><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
+                </tr>
+            </table>
+
+            <form id="companies{cik}-path" style="width: 100%;">
+              
+              
+              
+                <h4>Path Parameters:</h4>
+              
+              <table cellpadding"3">
+              
+                
+                  <tr>
+                    <td align="right" width="18%" style="padding:5px;">cik:</td>
+                    <td style="padding:5px;" width="35%"><input type="text" name='cik' value="" class="form-control" style="width: 100%;"></td>
+                    <td style="padding:5px;"><i>The CIK for the company.</i></td>
+                  </tr>
+                
+              
+                
+              
+              </table>
+            </form>
+            <form id="companies{cik}-param" style="width: 100%;">
+              
+              
+              
+              <table cellpadding"3">
+              
+                
+              
+                
+              
+              </table>
+            </form>
+
+            <center>
+            <table cellpadding"3" style="margin-top: 10px;">
+                <tr>
+                  <td align="center"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies{cik}','/companies/{cik}/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
+                </tr>
+            </table>
+            </center>
+
+            <hr />
+
+          
+
+        
+
+          
+          
+          
+          
+          
+          
+
+          
+
+            
+
+            <h3>Delete Company</h3>
+            <p>Delete a single company.</p>
+            <p><strong>URL:</strong> <a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/</a></p>
+
+            <h4>Authentication:</h4>
+            <table cellpadding"3" cellspacing="2">
+                <tr>
+                  <td align="right" width="25%">x-api-key:</td>
+                  <td><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
+                </tr>
+            </table>
+
+            <form id="companies{cik}-path" style="width: 100%;">
+              
+              
+              
+                <h4>Path Parameters:</h4>
+              
+              <table cellpadding"3">
+              
+                
+                  <tr>
+                    <td align="right" width="18%" style="padding:5px;">cik:</td>
+                    <td style="padding:5px;" width="35%"><input type="text" name='cik' value="" class="form-control" style="width: 100%;"></td>
+                    <td style="padding:5px;"><i>The CIK for the company.</i></td>
+                  </tr>
+                
+              
+              </table>
+            </form>
+            <form id="companies{cik}-param" style="width: 100%;">
+              
+              
+              
+              <table cellpadding"3">
+              
+                
+              
+              </table>
+            </form>
+
+            <center>
+            <table cellpadding"3" style="margin-top: 10px;">
+                <tr>
+                  <td align="center"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies{cik}','/companies/{cik}/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
+                </tr>
+            </table>
+            </center>
+
+            <hr />
+
+          
+
+        
+
+      
+
+    
+
+</section>
+<hr />
+
               <footer>
   <p align="center">
     

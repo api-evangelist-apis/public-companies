@@ -1,0 +1,39 @@
+{
+    "$id": "https://sec.companies.apievangelist.com/json-schema/companies-mailing-address.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "title": "companies_mailing_address",
+        "description": "The mailing address for a company.",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "maxLength": 11
+            },
+            "CIK": {
+                "type": "integer",
+                "maxLength": 11
+            },
+            "street": {
+                "type": "string",
+                "maxLength": 500
+            },
+            "city": {
+                "type": "string",
+                "maxLength": 250
+            },
+            "state": {
+                "type": "string",
+                "maxLength": 10
+            },
+            "zipCode": {
+                "type": "string",
+                "maxLength": 25
+            }
+        },
+        "required": [
+            "id"
+        ]
+    }
+}
