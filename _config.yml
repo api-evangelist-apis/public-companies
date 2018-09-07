@@ -82,14 +82,14 @@ stops:
       - name: Service Name
         description: A simple title for this service.
         instruction: Provide title for the service.
-        status: None
+        status: Active
         fields:
           - service_name: Public Company API
 
       - name: Service Description
         description: A simple, descriptive paragraph for this service.
         instruction: Provide concise description for the service.
-        status: None
+        status: Active
         fields:
           - service_description: This is an API for accessing publicly traded companies that have been issued a CIK by the Securities and Exchange Commission (SEC). This is not an official API of the SEC, but a custom implementation using data provided by the SEC, and enriched with data from other sources.
 
