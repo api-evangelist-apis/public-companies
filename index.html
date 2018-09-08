@@ -160,6 +160,7 @@ title: SEC Companies
                     {% endfor %}
                     </table>
                   </form>
+
                   <form id="{{ slug }}-param" style="width: 100%;">
                     {% assign any_path_parameters = 0 %}
                     {% for parameter in parameters %}{% if parameter.in == 'query' %}{% assign any_path_parameters = 1 %}{% endif %}{% endfor %}
