@@ -104,13 +104,26 @@ title: SEC Companies
     <table>
     {% for stop in site.stops %}
       <tr>
-        <td colspan="2">{{ stop.name }}</td>
+        <td colspan="2"><h3>{{ stop.name }}</h3></td>
       </tr>
       {% for item in stop.items %}
         <tr>
           <td style="width: 50px;"></td>
-          <td>{{ item.name }} - {{ item.instruction }}</td>
+          <td><strong>{{ item.name }}</strong> ({{ item.status }}) - {{ item.instruction }}</td>
         </tr>
+          <tr>
+            <td style="width: 50px;"></td>
+            <td>
+              <table>
+                {% for field in item.fields %}
+                  <tr>
+                    <td>{{ field[0]}}</td>
+                    <td>{{ field[1]}}</td>
+                  </tr>
+                {% endfor %}
+              </table>
+            </td>
+          </tr>
       {% endfor %}
     {% endfor %}
     </table>
