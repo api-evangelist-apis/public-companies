@@ -119,70 +119,78 @@ title: SEC Companies
 
             {% assign slug = path[0] | replace: '/','' %}
 
-            <div class="alert alert-dark" role="alert">{{ summary }}</div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md">
 
-            <p>{{ description }}</p>
+                  <div class="alert alert-dark" role="alert">{{ summary }}</div>
 
-            <table cellpadding"3" width="100%">
-                <tr>
-                  <td align="right" style="padding:5px; width: 20%;"><strong>URL:</strong></td>
-                  <td colspan="2" style="padding:5px; width: 80%"><a href="{{ api_url }}{{ path[0] }}" target="_blank">{{ api_url }}{{ path[0] }}</a></td>
-                </tr>
-            </table>
+                  <p>{{ description }}</p>
 
-            <h4>Authentication:</h4>
-            <table cellpadding"3" width="100%">
-                <tr>
-                  <td align="right" style="padding:5px; width: 20%;"><strong>x-api-key:</strong></td>
-                  <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
-                  <td style="padding:5px;"></td>
-                </tr>
-            </table>
+                  <table cellpadding"3" width="100%">
+                      <tr>
+                        <td align="right" style="padding:5px; width: 20%;"><strong>URL:</strong></td>
+                        <td colspan="2" style="padding:5px; width: 80%"><a href="{{ api_url }}{{ path[0] }}" target="_blank">{{ api_url }}{{ path[0] }}</a></td>
+                      </tr>
+                  </table>
 
-            <form id="{{ slug }}-path" style="width: 100%;">
-              {% assign any_path_parameters = 0 %}
-              {% for parameter in parameters %}{% if parameter.in == 'path' %}{% assign any_path_parameters = 1 %}{% endif %}{% endfor %}
-              {% if any_path_parameters == 1 %}
-                <h4>Path Parameters:</h4>
-              {% endif %}
-              <table cellpadding"3" width="100%">
-              {% for parameter in parameters %}
-                {% if parameter.in == 'path' %}
-                  <tr>
-                    <td align="right" style="padding:5px; width: 20%;"><strong>{{ parameter.name }}:</strong></td>
-                    <td style="padding:5px;" width="35%"><input type="text" name='{{ parameter.name | downcase }}' value="{{ parameter.default }}" class="form-control" style="width: 100%;"></td>
-                    <td style="padding:5px;"><i>{{ parameter.description }}</i></td>
-                  </tr>
-                {% endif %}
-              {% endfor %}
-              </table>
-            </form>
-            <form id="{{ slug }}-param" style="width: 100%;">
-              {% assign any_path_parameters = 0 %}
-              {% for parameter in parameters %}{% if parameter.in == 'query' %}{% assign any_path_parameters = 1 %}{% endif %}{% endfor %}
-              {% if any_path_parameters == 1 %}
-                <h4>Query Parameters:</h4>
-              {% endif %}
-              <table cellpadding"3" width="100%">
-              {% for parameter in parameters %}
-                {% if parameter.in == 'query' %}
-                  <tr>
-                    <td align="right" style="padding:5px; width: 20%;"><strong>{{ parameter.name }}:</strong></td>
-                    <td style="padding:5px;" width="25%"><input type="text" name='{{ parameter.name | downcase }}' value="{{ parameter.default }}" class="form-control" style="width: 100%;"></td>
-                    <td style="padding:5px;"><i>{{ parameter.description }}</i></td>
-                  </tr>
-                {% endif %}
-              {% endfor %}
-              </table>
-            </form>
+                  <h4>Authentication:</h4>
+                  <table cellpadding"3" width="100%">
+                      <tr>
+                        <td align="right" style="padding:5px; width: 20%;"><strong>x-api-key:</strong></td>
+                        <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
+                        <td style="padding:5px;"></td>
+                      </tr>
+                  </table>
 
-            <table cellpadding"3" width="100%">
-                <tr>
-                  <td align="right" style="padding:5px; width: 20%;"></td>
-                  <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('{{ slug }}','{{ path[0] }}','{{ api_url }}');">Make API Request</button></td>
-                  <td style="padding:5px;"></td>
-                </tr>
-            </table>
+                  <form id="{{ slug }}-path" style="width: 100%;">
+                    {% assign any_path_parameters = 0 %}
+                    {% for parameter in parameters %}{% if parameter.in == 'path' %}{% assign any_path_parameters = 1 %}{% endif %}{% endfor %}
+                    {% if any_path_parameters == 1 %}
+                      <h4>Path Parameters:</h4>
+                    {% endif %}
+                    <table cellpadding"3" width="100%">
+                    {% for parameter in parameters %}
+                      {% if parameter.in == 'path' %}
+                        <tr>
+                          <td align="right" style="padding:5px; width: 20%;"><strong>{{ parameter.name }}:</strong></td>
+                          <td style="padding:5px;" width="35%"><input type="text" name='{{ parameter.name | downcase }}' value="{{ parameter.default }}" class="form-control" style="width: 100%;"></td>
+                          <td style="padding:5px;"><i>{{ parameter.description }}</i></td>
+                        </tr>
+                      {% endif %}
+                    {% endfor %}
+                    </table>
+                  </form>
+                  <form id="{{ slug }}-param" style="width: 100%;">
+                    {% assign any_path_parameters = 0 %}
+                    {% for parameter in parameters %}{% if parameter.in == 'query' %}{% assign any_path_parameters = 1 %}{% endif %}{% endfor %}
+                    {% if any_path_parameters == 1 %}
+                      <h4>Query Parameters:</h4>
+                    {% endif %}
+                    <table cellpadding"3" width="100%">
+                    {% for parameter in parameters %}
+                      {% if parameter.in == 'query' %}
+                        <tr>
+                          <td align="right" style="padding:5px; width: 20%;"><strong>{{ parameter.name }}:</strong></td>
+                          <td style="padding:5px;" width="25%"><input type="text" name='{{ parameter.name | downcase }}' value="{{ parameter.default }}" class="form-control" style="width: 100%;"></td>
+                          <td style="padding:5px;"><i>{{ parameter.description }}</i></td>
+                        </tr>
+                      {% endif %}
+                    {% endfor %}
+                    </table>
+                  </form>
+
+                  <table cellpadding"3" width="100%">
+                      <tr>
+                        <td align="right" style="padding:5px; width: 20%;"></td>
+                        <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('{{ slug }}','{{ path[0] }}','{{ api_url }}');">Make API Request</button></td>
+                        <td style="padding:5px;"></td>
+                      </tr>
+                  </table>
+
+                </div>
+              </div>
+            </div>
 
           {% endif %}
 
