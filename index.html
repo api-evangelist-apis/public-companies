@@ -123,20 +123,20 @@ title: SEC Companies
 
             <div class="container">
               <div class="row">
-                <div class="col-10">
+                <div class="col-8">
 
-                  <h4>URL:</h4>
+                  <strong>URL:</strong>
                   <table cellpadding"3" width="100%">
                       <tr>
-                        <td align="right" style="padding:5px; width: 20%;"></td>
+                        <td align="right" style="padding:5px; width: 12%;"></td>
                         <td colspan="2" style="padding:5px; width: 80%"><a href="{{ api_url }}{{ path[0] }}" target="_blank">{{ api_url }}{{ path[0] }}</a></td>
                       </tr>
                   </table>
 
-                  <h4>Authentication:</h4>
+                  <strong>Authentication:</strong>
                   <table cellpadding"3" width="100%">
                       <tr>
-                        <td align="right" style="padding:5px; width: 20%;"><strong>x-api-key:</strong></td>
+                        <td align="right" style="padding:5px; width: 12%;"><strong>x-api-key:</strong></td>
                         <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
                         <td style="padding:5px;"></td>
                       </tr>
@@ -146,13 +146,13 @@ title: SEC Companies
                     {% assign any_path_parameters = 0 %}
                     {% for parameter in parameters %}{% if parameter.in == 'path' %}{% assign any_path_parameters = 1 %}{% endif %}{% endfor %}
                     {% if any_path_parameters == 1 %}
-                      <h4>Path Parameters:</h4>
+                      <strong>Path Parameters:</strong>
                     {% endif %}
                     <table cellpadding"3" width="100%">
                     {% for parameter in parameters %}
                       {% if parameter.in == 'path' %}
                         <tr>
-                          <td align="right" style="padding:5px; width: 20%;"><strong>{{ parameter.name }}:</strong></td>
+                          <td align="right" style="padding:5px; width: 12%;"><strong>{{ parameter.name }}:</strong></td>
                           <td style="padding:5px;" width="35%"><input type="text" name='{{ parameter.name | downcase }}' value="{{ parameter.default }}" class="form-control" style="width: 100%;"></td>
                           <td style="padding:5px;"><i>{{ parameter.description }}</i></td>
                         </tr>
@@ -164,13 +164,13 @@ title: SEC Companies
                     {% assign any_path_parameters = 0 %}
                     {% for parameter in parameters %}{% if parameter.in == 'query' %}{% assign any_path_parameters = 1 %}{% endif %}{% endfor %}
                     {% if any_path_parameters == 1 %}
-                      <h4>Query Parameters:</h4>
+                      <strong>Query Parameters:</strong>
                     {% endif %}
                     <table cellpadding"3" width="100%">
                     {% for parameter in parameters %}
                       {% if parameter.in == 'query' %}
                         <tr>
-                          <td align="right" style="padding:5px; width: 20%;"><strong>{{ parameter.name }}:</strong></td>
+                          <td align="right" style="padding:5px; width: 12%;"><strong>{{ parameter.name }}:</strong></td>
                           <td style="padding:5px;" width="25%"><input type="text" name='{{ parameter.name | downcase }}' value="{{ parameter.default }}" class="form-control" style="width: 100%;"></td>
                           <td style="padding:5px;"><i>{{ parameter.description }}</i></td>
                         </tr>
@@ -184,7 +184,7 @@ title: SEC Companies
                 <div class="col-2">
                   <table cellpadding"3" width="100%">
                       <tr>
-                        <td align="right" style="padding:5px; width: 20%;"></td>
+                        <td align="right" style="padding:5px; width: 12%;"></td>
                         <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('{{ slug }}','{{ path[0] }}','{{ api_url }}');">Make API Request</button></td>
                         <td style="padding:5px;"></td>
                       </tr>
