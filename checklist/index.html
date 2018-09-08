@@ -114,7 +114,7 @@ title: SEC Companies
           <tr>
             <td style="width: 50px;"></td>
             <td style="padding: 3px;">
-              <table border="1" width="100%">
+              <table width="100%">
                 {% for fields in item.fields %}
                   <tr>
                   {% for field in fields %}
@@ -123,7 +123,13 @@ title: SEC Companies
                     {% assign field_details = field[1] %}
                     <td style="width: 10%;"></td>
                     <td style="width: 20%; text-align: right;"><strong>{{ field_label }}:</strong></td>
-                    <td><input type="text" name="{{ field_name }}" value="{{ field_details }}" style="width: 75%" /></td>
+                    <td>
+                      {% if field_details.first %}
+                        ARRAY!!! - {{ field_details }}
+                      {% else %}
+                        <input type="text" name="{{ field_name }}" value="{{ field_details }}" style="width: 75%" />
+                      {% endif %}
+                    </td>
                   {% endfor %}
                   </tr>
                 {% endfor %}
