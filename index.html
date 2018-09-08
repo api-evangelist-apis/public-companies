@@ -38,10 +38,11 @@ title: SEC Companies
 
   <!--Begin Documentation-->
   {% if stop.name == 'Documentation' %}
-
+    IN DOCS!!<Br />
     {% for item in stop.items %}
-
+    HERE: {{ item.name }}<br />
       {% if item.name == 'Overview' %}
+        IN OVERVE!!!
         {% for field in item.fields %}
           field: {{ field }}<br />
           {% assign documentation_overview_title = field.title %}
