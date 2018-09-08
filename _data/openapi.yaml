@@ -206,40 +206,44 @@ definitions:
       cik:
         type: string
         maxLength: 100
+        description: The CIK for the company.
       name:
         type: string
         maxLength: 500
+        description: The name of the company.
       location:
         type: string
         maxLength: 5
+        description: The location for the company.
       sic:
         type: integer
         maxLength: 11
+        description: The Standard Industrial Classification (SIC) code for the company.
       sic_description:
         type: string
         maxLength: 250
+        description: The Standard Industrial Classification (SIC) code description for the company.
       fiscal_year_end:
         type: string
         maxLength: 50
+        description: When the company's fiscal year ends.
       state_of_incorporation:
         type: string
         maxLength: 5
-      pull_profile:
-        type: integer
-        maxLength: 11
-      pull_filings:
-        type: integer
-        maxLength: 11
+        description: State the compay was incorporated.
       business_addresses:
         type: "array"
+        description: The physical addresses for the business.
         items:
           $ref: "#/definitions/business_address"
       mailing_addresses:
         type: "array"
+        description: The mailing addresses for the business.
         items:
           $ref: "#/definitions/mailing_address"
       former_names:
         type: "array"
+        description: The former names used by the business. 
         items:
           $ref: "#/definitions/former_name"
     required:
@@ -283,12 +287,15 @@ definitions:
       cik:
         type: integer
         maxLength: 11
+        description: The CIK for the company.
       date_used:
         type: string
         maxLength: 50
+        description: Last date company used name.
       name:
         type: string
         maxLength: 250
+        description: The name the business used.
     required:
     - cik
   mailing_address:
@@ -299,18 +306,23 @@ definitions:
       cik:
         type: integer
         maxLength: 11
+        description: The CIK for the company.
       street:
         type: string
         maxLength: 500
+        description: The street address for the business mailing address.
       city:
         type: string
         maxLength: 250
+        description: The city the company receives mail.
       state:
         type: string
         maxLength: 10
-      zipCode:
+        description: The state the company receives mail.
+      zip_code:
         type: string
         maxLength: 25
+        description: The zip code where the company receives mail.
     required:
     - cik
   errorResponse:
