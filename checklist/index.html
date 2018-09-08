@@ -115,12 +115,13 @@ title: SEC Companies
             <td style="width: 50px;"></td>
             <td>
               <table border="1">
-                {% for field in item.fields %}
-                  {% assign this_field = field %}
+                {% for fields in item.fields %}
                   <tr>
+                  {% for field in fields %}
                     <td>1) {{ field[0]}}</td>
                     <td>2) {{ field[1]}}</td>
-                    <td>3) {{ this_field[0] }}</td>
+                    <td>3) {{ field }}</td>
+                  {% endfor %}
                   </tr>
                 {% endfor %}
               </table>
