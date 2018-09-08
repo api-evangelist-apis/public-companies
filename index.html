@@ -44,7 +44,7 @@ title: SEC Companies
       {% if item.name == 'Overview' %}
         IN OVERVE!!!
         {% assign fields = item.fields %}
-        fields 1: {{ fields }}<br />
+        fields 11: {{ fields.title }}<br />
         {% for field in item.fields %}
           field: {{ field }}<br />
           {% assign documentation_overview_title = field.title %}
