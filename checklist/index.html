@@ -118,9 +118,10 @@ title: SEC Companies
                 {% for fields in item.fields %}
                   <tr>
                   {% for field in fields %}
-                    <td>1) {{ field[0]}}</td>
-                    <td>2) {{ field[1]}}</td>
-                    <td>3) {{ field }}</td>
+                    {% assign field_name = field[0] %}
+                    {% assign field_details = field[1] %}
+                    <td>{{ field_details }}</td>
+                    <td>{{ field_details }}</td>
                   {% endfor %}
                   </tr>
                 {% endfor %}
