@@ -547,89 +547,82 @@
 
             
 
-            <div class="card">
-              <div class="card-header">
-                Search Companies
-              </div>
-              <div class="card-body">
+            <div class="alert alert-dark" role="alert">Search Companies</div>
 
-                <p>Search across all of the companies.</p>
+            <p>Search across all of the companies.</p>
 
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"><strong>URL:</strong></td>
-                      <td colspan="2" style="padding:5px; width: 80%"><a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/</a></td>
-                    </tr>
-                </table>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"><strong>URL:</strong></td>
+                  <td colspan="2" style="padding:5px; width: 80%"><a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/</a></td>
+                </tr>
+            </table>
 
-                <h4>Authentication:</h4>
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"><strong>x-api-key:</strong></td>
-                      <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
-                      <td style="padding:5px;"></td>
-                    </tr>
-                </table>
+            <h4>Authentication:</h4>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"><strong>x-api-key:</strong></td>
+                  <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
+                  <td style="padding:5px;"></td>
+                </tr>
+            </table>
 
-                <form id="companies-path" style="width: 100%;">
-                  
-                  
-                  
-                  <table cellpadding"3" width="100%">
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                  </table>
-                </form>
-                <form id="companies-param" style="width: 100%;">
-                  
-                  
-                  
-                    <h4>Query Parameters:</h4>
-                  
-                  <table cellpadding"3" width="100%">
-                  
-                    
-                      <tr>
-                        <td align="right" style="padding:5px; width: 20%;"><strong>search_name:</strong></td>
-                        <td style="padding:5px;" width="25%"><input type="text" name='search_name' value="" class="form-control" style="width: 100%;"></td>
-                        <td style="padding:5px;"><i>The string to search company name by.</i></td>
-                      </tr>
-                    
-                  
-                    
-                      <tr>
-                        <td align="right" style="padding:5px; width: 20%;"><strong>search_sic:</strong></td>
-                        <td style="padding:5px;" width="25%"><input type="text" name='search_sic' value="" class="form-control" style="width: 100%;"></td>
-                        <td style="padding:5px;"><i>The string to search SIC code by.</i></td>
-                      </tr>
-                    
-                  
-                    
-                      <tr>
-                        <td align="right" style="padding:5px; width: 20%;"><strong>search_state:</strong></td>
-                        <td style="padding:5px;" width="25%"><input type="text" name='search_state' value="" class="form-control" style="width: 100%;"></td>
-                        <td style="padding:5px;"><i>The string to search state of incorporation by.</i></td>
-                      </tr>
-                    
-                  
-                  </table>
-                </form>
+            <form id="companies-path" style="width: 100%;">
+              
+              
+              
+              <table cellpadding"3" width="100%">
+              
+                
+              
+                
+              
+                
+              
+              </table>
+            </form>
+            <form id="companies-param" style="width: 100%;">
+              
+              
+              
+                <h4>Query Parameters:</h4>
+              
+              <table cellpadding"3" width="100%">
+              
+                
+                  <tr>
+                    <td align="right" style="padding:5px; width: 20%;"><strong>search_name:</strong></td>
+                    <td style="padding:5px;" width="25%"><input type="text" name='search_name' value="" class="form-control" style="width: 100%;"></td>
+                    <td style="padding:5px;"><i>The string to search company name by.</i></td>
+                  </tr>
+                
+              
+                
+                  <tr>
+                    <td align="right" style="padding:5px; width: 20%;"><strong>search_sic:</strong></td>
+                    <td style="padding:5px;" width="25%"><input type="text" name='search_sic' value="" class="form-control" style="width: 100%;"></td>
+                    <td style="padding:5px;"><i>The string to search SIC code by.</i></td>
+                  </tr>
+                
+              
+                
+                  <tr>
+                    <td align="right" style="padding:5px; width: 20%;"><strong>search_state:</strong></td>
+                    <td style="padding:5px;" width="25%"><input type="text" name='search_state' value="" class="form-control" style="width: 100%;"></td>
+                    <td style="padding:5px;"><i>The string to search state of incorporation by.</i></td>
+                  </tr>
+                
+              
+              </table>
+            </form>
 
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"></td>
-                      <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies','/companies/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
-                      <td style="padding:5px;"></td>
-                    </tr>
-                </table>
-
-              </div>
-            </div>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"></td>
+                  <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies','/companies/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
+                  <td style="padding:5px;"></td>
+                </tr>
+            </table>
 
           
 
@@ -646,61 +639,54 @@
 
             
 
-            <div class="card">
-              <div class="card-header">
-                Add Company
-              </div>
-              <div class="card-body">
+            <div class="alert alert-dark" role="alert">Add Company</div>
 
-                <p>Add a new company to the database.</p>
+            <p>Add a new company to the database.</p>
 
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"><strong>URL:</strong></td>
-                      <td colspan="2" style="padding:5px; width: 80%"><a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/</a></td>
-                    </tr>
-                </table>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"><strong>URL:</strong></td>
+                  <td colspan="2" style="padding:5px; width: 80%"><a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/</a></td>
+                </tr>
+            </table>
 
-                <h4>Authentication:</h4>
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"><strong>x-api-key:</strong></td>
-                      <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
-                      <td style="padding:5px;"></td>
-                    </tr>
-                </table>
+            <h4>Authentication:</h4>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"><strong>x-api-key:</strong></td>
+                  <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
+                  <td style="padding:5px;"></td>
+                </tr>
+            </table>
 
-                <form id="companies-path" style="width: 100%;">
-                  
-                  
-                  
-                  <table cellpadding"3" width="100%">
-                  
-                    
-                  
-                  </table>
-                </form>
-                <form id="companies-param" style="width: 100%;">
-                  
-                  
-                  
-                  <table cellpadding"3" width="100%">
-                  
-                    
-                  
-                  </table>
-                </form>
+            <form id="companies-path" style="width: 100%;">
+              
+              
+              
+              <table cellpadding"3" width="100%">
+              
+                
+              
+              </table>
+            </form>
+            <form id="companies-param" style="width: 100%;">
+              
+              
+              
+              <table cellpadding"3" width="100%">
+              
+                
+              
+              </table>
+            </form>
 
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"></td>
-                      <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies','/companies/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
-                      <td style="padding:5px;"></td>
-                    </tr>
-                </table>
-
-              </div>
-            </div>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"></td>
+                  <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies','/companies/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
+                  <td style="padding:5px;"></td>
+                </tr>
+            </table>
 
           
 
@@ -724,69 +710,62 @@
 
             
 
-            <div class="card">
-              <div class="card-header">
-                Get Company
-              </div>
-              <div class="card-body">
+            <div class="alert alert-dark" role="alert">Get Company</div>
 
-                <p>Get a single company record.</p>
+            <p>Get a single company record.</p>
 
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"><strong>URL:</strong></td>
-                      <td colspan="2" style="padding:5px; width: 80%"><a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/</a></td>
-                    </tr>
-                </table>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"><strong>URL:</strong></td>
+                  <td colspan="2" style="padding:5px; width: 80%"><a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/</a></td>
+                </tr>
+            </table>
 
-                <h4>Authentication:</h4>
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"><strong>x-api-key:</strong></td>
-                      <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
-                      <td style="padding:5px;"></td>
-                    </tr>
-                </table>
+            <h4>Authentication:</h4>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"><strong>x-api-key:</strong></td>
+                  <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
+                  <td style="padding:5px;"></td>
+                </tr>
+            </table>
 
-                <form id="companies{cik}-path" style="width: 100%;">
-                  
-                  
-                  
-                    <h4>Path Parameters:</h4>
-                  
-                  <table cellpadding"3" width="100%">
-                  
-                    
-                      <tr>
-                        <td align="right" style="padding:5px; width: 20%;"><strong>cik:</strong></td>
-                        <td style="padding:5px;" width="35%"><input type="text" name='cik' value="" class="form-control" style="width: 100%;"></td>
-                        <td style="padding:5px;"><i>The CIK for the company.</i></td>
-                      </tr>
-                    
-                  
-                  </table>
-                </form>
-                <form id="companies{cik}-param" style="width: 100%;">
-                  
-                  
-                  
-                  <table cellpadding"3" width="100%">
-                  
-                    
-                  
-                  </table>
-                </form>
+            <form id="companies{cik}-path" style="width: 100%;">
+              
+              
+              
+                <h4>Path Parameters:</h4>
+              
+              <table cellpadding"3" width="100%">
+              
+                
+                  <tr>
+                    <td align="right" style="padding:5px; width: 20%;"><strong>cik:</strong></td>
+                    <td style="padding:5px;" width="35%"><input type="text" name='cik' value="" class="form-control" style="width: 100%;"></td>
+                    <td style="padding:5px;"><i>The CIK for the company.</i></td>
+                  </tr>
+                
+              
+              </table>
+            </form>
+            <form id="companies{cik}-param" style="width: 100%;">
+              
+              
+              
+              <table cellpadding"3" width="100%">
+              
+                
+              
+              </table>
+            </form>
 
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"></td>
-                      <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies{cik}','/companies/{cik}/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
-                      <td style="padding:5px;"></td>
-                    </tr>
-                </table>
-
-              </div>
-            </div>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"></td>
+                  <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies{cik}','/companies/{cik}/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
+                  <td style="padding:5px;"></td>
+                </tr>
+            </table>
 
           
 
@@ -803,73 +782,66 @@
 
             
 
-            <div class="card">
-              <div class="card-header">
-                Update Company
-              </div>
-              <div class="card-body">
+            <div class="alert alert-dark" role="alert">Update Company</div>
 
-                <p>Update the company record.</p>
+            <p>Update the company record.</p>
 
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"><strong>URL:</strong></td>
-                      <td colspan="2" style="padding:5px; width: 80%"><a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/</a></td>
-                    </tr>
-                </table>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"><strong>URL:</strong></td>
+                  <td colspan="2" style="padding:5px; width: 80%"><a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/</a></td>
+                </tr>
+            </table>
 
-                <h4>Authentication:</h4>
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"><strong>x-api-key:</strong></td>
-                      <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
-                      <td style="padding:5px;"></td>
-                    </tr>
-                </table>
+            <h4>Authentication:</h4>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"><strong>x-api-key:</strong></td>
+                  <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
+                  <td style="padding:5px;"></td>
+                </tr>
+            </table>
 
-                <form id="companies{cik}-path" style="width: 100%;">
-                  
-                  
-                  
-                    <h4>Path Parameters:</h4>
-                  
-                  <table cellpadding"3" width="100%">
-                  
-                    
-                      <tr>
-                        <td align="right" style="padding:5px; width: 20%;"><strong>cik:</strong></td>
-                        <td style="padding:5px;" width="35%"><input type="text" name='cik' value="" class="form-control" style="width: 100%;"></td>
-                        <td style="padding:5px;"><i>The CIK for the company.</i></td>
-                      </tr>
-                    
-                  
-                    
-                  
-                  </table>
-                </form>
-                <form id="companies{cik}-param" style="width: 100%;">
-                  
-                  
-                  
-                  <table cellpadding"3" width="100%">
-                  
-                    
-                  
-                    
-                  
-                  </table>
-                </form>
+            <form id="companies{cik}-path" style="width: 100%;">
+              
+              
+              
+                <h4>Path Parameters:</h4>
+              
+              <table cellpadding"3" width="100%">
+              
+                
+                  <tr>
+                    <td align="right" style="padding:5px; width: 20%;"><strong>cik:</strong></td>
+                    <td style="padding:5px;" width="35%"><input type="text" name='cik' value="" class="form-control" style="width: 100%;"></td>
+                    <td style="padding:5px;"><i>The CIK for the company.</i></td>
+                  </tr>
+                
+              
+                
+              
+              </table>
+            </form>
+            <form id="companies{cik}-param" style="width: 100%;">
+              
+              
+              
+              <table cellpadding"3" width="100%">
+              
+                
+              
+                
+              
+              </table>
+            </form>
 
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"></td>
-                      <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies{cik}','/companies/{cik}/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
-                      <td style="padding:5px;"></td>
-                    </tr>
-                </table>
-
-              </div>
-            </div>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"></td>
+                  <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies{cik}','/companies/{cik}/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
+                  <td style="padding:5px;"></td>
+                </tr>
+            </table>
 
           
 
@@ -886,69 +858,62 @@
 
             
 
-            <div class="card">
-              <div class="card-header">
-                Delete Company
-              </div>
-              <div class="card-body">
+            <div class="alert alert-dark" role="alert">Delete Company</div>
 
-                <p>Delete a single company.</p>
+            <p>Delete a single company.</p>
 
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"><strong>URL:</strong></td>
-                      <td colspan="2" style="padding:5px; width: 80%"><a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/</a></td>
-                    </tr>
-                </table>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"><strong>URL:</strong></td>
+                  <td colspan="2" style="padding:5px; width: 80%"><a href="https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/" target="_blank">https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production/companies/{cik}/</a></td>
+                </tr>
+            </table>
 
-                <h4>Authentication:</h4>
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"><strong>x-api-key:</strong></td>
-                      <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
-                      <td style="padding:5px;"></td>
-                    </tr>
-                </table>
+            <h4>Authentication:</h4>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"><strong>x-api-key:</strong></td>
+                  <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
+                  <td style="padding:5px;"></td>
+                </tr>
+            </table>
 
-                <form id="companies{cik}-path" style="width: 100%;">
-                  
-                  
-                  
-                    <h4>Path Parameters:</h4>
-                  
-                  <table cellpadding"3" width="100%">
-                  
-                    
-                      <tr>
-                        <td align="right" style="padding:5px; width: 20%;"><strong>cik:</strong></td>
-                        <td style="padding:5px;" width="35%"><input type="text" name='cik' value="" class="form-control" style="width: 100%;"></td>
-                        <td style="padding:5px;"><i>The CIK for the company.</i></td>
-                      </tr>
-                    
-                  
-                  </table>
-                </form>
-                <form id="companies{cik}-param" style="width: 100%;">
-                  
-                  
-                  
-                  <table cellpadding"3" width="100%">
-                  
-                    
-                  
-                  </table>
-                </form>
+            <form id="companies{cik}-path" style="width: 100%;">
+              
+              
+              
+                <h4>Path Parameters:</h4>
+              
+              <table cellpadding"3" width="100%">
+              
+                
+                  <tr>
+                    <td align="right" style="padding:5px; width: 20%;"><strong>cik:</strong></td>
+                    <td style="padding:5px;" width="35%"><input type="text" name='cik' value="" class="form-control" style="width: 100%;"></td>
+                    <td style="padding:5px;"><i>The CIK for the company.</i></td>
+                  </tr>
+                
+              
+              </table>
+            </form>
+            <form id="companies{cik}-param" style="width: 100%;">
+              
+              
+              
+              <table cellpadding"3" width="100%">
+              
+                
+              
+              </table>
+            </form>
 
-                <table cellpadding"3" width="100%">
-                    <tr>
-                      <td align="right" style="padding:5px; width: 20%;"></td>
-                      <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies{cik}','/companies/{cik}/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
-                      <td style="padding:5px;"></td>
-                    </tr>
-                </table>
-
-              </div>
-            </div>
+            <table cellpadding"3" width="100%">
+                <tr>
+                  <td align="right" style="padding:5px; width: 20%;"></td>
+                  <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('companies{cik}','/companies/{cik}/','https://ql1rvofpu5.execute-api.us-east-1.amazonaws.com/production');">Make API Request</button></td>
+                  <td style="padding:5px;"></td>
+                </tr>
+            </table>
 
           
 
