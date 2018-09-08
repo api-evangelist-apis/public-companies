@@ -106,8 +106,8 @@ stops:
         status: None
         fields:
           - schema:
-            - title: The title of the schema
-            - path: /path/of/the/schema
+          - title: The title of the schema
+          - path: /path/of/the/schema
 
       - name: OpenAPI
         description: An OpenAPI definition for the surface area of the API.
@@ -833,6 +833,15 @@ stops:
           - title: 'API Documentation'
           - header: 'This is the interactive API documentation for this API, and when you are authenticated, will allow you to make API calls, and see the responses for each API path.'
           - footer: 'This documentation is generated from the OpenAPI definition for this API, which you can use to publish, syndicate, and integrate with this API documentation elsewhere.'
+
+      - name: Schema
+        description: The descriptive header and footer paragraphs for the documentation schema.
+        instruction: Provide some content to introduce and close up the documentation schema.
+        status: Active
+        fields:
+          - title: 'API Schema'
+          - header: This is the schema definition for this API, describing the schema for requests and responses.
+          - footer: This documentation is driven by JSON schema, which is available as part of the OpenAPI.
 
       - name: Examples
         description: Examples of using the API paths for this service.

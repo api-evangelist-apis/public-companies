@@ -918,6 +918,262 @@
     </div>
 </section>
 <hr />
+<a name="schema"></a>
+<section id="schema">
+  <div class="content">
+		<header>
+			<h3></h3>
+		</header>
+		<p></p>
+
+    <div class="row">
+        <div class="tabs documentation tab-container">
+
+          
+            
+            
+            <p><strong>companies</strong></p>
+            <ul style='padding-left: 50px;'>
+              
+            </ul>
+          
+            
+            
+            <p><strong>company</strong></p>
+            <ul style='padding-left: 50px;'>
+              
+                
+                <li><strong>cik</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>name</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>location</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>sic</strong> (<em>integer</em>) - </li>
+              
+                
+                <li><strong>sic_description</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>fiscal_year_end</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>state_of_incorporation</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>pull_profile</strong> (<em>integer</em>) - </li>
+              
+                
+                <li><strong>pull_filings</strong> (<em>integer</em>) - </li>
+              
+                
+                <li><strong>business_addresses</strong> (<em>array</em>) - </li>
+              
+                
+                <li><strong>mailing_addresses</strong> (<em>array</em>) - </li>
+              
+                
+                <li><strong>former_names</strong> (<em>array</em>) - </li>
+              
+            </ul>
+          
+            
+            
+            <p><strong>business_address</strong></p>
+            <ul style='padding-left: 50px;'>
+              
+                
+                <li><strong>cik</strong> (<em>integer</em>) - </li>
+              
+                
+                <li><strong>street</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>city</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>state</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>zipCode</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>phoneNumber</strong> (<em>string</em>) - </li>
+              
+            </ul>
+          
+            
+            
+            <p><strong>former_name</strong></p>
+            <ul style='padding-left: 50px;'>
+              
+                
+                <li><strong>cik</strong> (<em>integer</em>) - </li>
+              
+                
+                <li><strong>date_used</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>name</strong> (<em>string</em>) - </li>
+              
+            </ul>
+          
+            
+            
+            <p><strong>mailing_address</strong></p>
+            <ul style='padding-left: 50px;'>
+              
+                
+                <li><strong>cik</strong> (<em>integer</em>) - </li>
+              
+                
+                <li><strong>street</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>city</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>state</strong> (<em>string</em>) - </li>
+              
+                
+                <li><strong>zipCode</strong> (<em>string</em>) - </li>
+              
+            </ul>
+          
+            
+            
+            <p><strong>errorResponse</strong></p>
+            <ul style='padding-left: 50px;'>
+              
+                
+                <li><strong>code</strong> (<em>integer</em>) - Repeat the HTTP status code</li>
+              
+                
+                <li><strong>message</strong> (<em>integer</em>) - A plain language message explaining the error</li>
+              
+            </ul>
+          
+
+
+          <script type="text/javascript">
+
+            if(Cookies.get('app_key'))
+              {
+              document.getElementById('x-api-key').value = Cookies.get('app_key');
+              }
+
+             function getRequest($slug,$path,$url)
+              {
+
+              $api_url = $url + $path;
+
+              document.getElementById('loading').style.display = '';
+
+              $appkey = document.getElementById('x-api-key').value;
+
+              var path_elements = document.getElementById($slug+'-path').elements;
+              for(var i = 0, element; element = path_elements[i++];)
+                {
+                  if(element.type === "text")
+                    {
+                    if(element.value!='')
+                      {
+                      $replace_string = '{' + element.name + '}';
+                      $api_url = $api_url.replace($replace_string,element.value);
+                      }
+                    }
+                  }
+
+              var param_elements = document.getElementById($slug+'-param').elements;
+              $anyparams = 0;
+              $query_string = '';
+              for(var i = 0, element; element = param_elements[i++];)
+                {
+                  if(element.type === "text")
+                    {
+                    if(element.value!='')
+                      {
+                      if($query_string=='')
+                        {
+                        $query_string = element.name + '=' + element.value;
+                        }
+                      else
+                        {
+                        $query_string = $query_string + '&' + element.name + '=' + element.value;
+                        }
+                      $anyparams = 1;
+                      }
+                    }
+                  }
+
+              if($anyparams == 1){ $api_url = $api_url + '?' + $query_string; }
+
+              var $headers = {'x-api-key': $appkey};
+              console.log("header: " + $headers);
+
+              var response = $.ajax({
+                 url: $api_url,
+                 method: "get",
+                 headers: $headers,
+                 success:function(response){
+
+                    document.getElementById('loading').style.display = 'none';
+
+                    $viewer = JSON.stringify(response, null, 2);
+
+                    document.getElementById('response').value = $viewer;
+                    document.getElementById('response').style.width = "100%";
+                    document.getElementById('response').style.height = "450px";
+
+                  },
+                  error: function(XMLHttpRequest, textStatus, errorThrown) {
+
+                      document.getElementById('loading').style.display = 'none';
+
+                      $message = "Status: " + textStatus + "\nError: " + errorThrown;
+
+                      document.getElementById('response').value = $message;
+                      document.getElementById('response').style.width = "100%";
+                      document.getElementById('response').style.height = "50px";
+                  }
+                });
+
+              }
+          </script>
+
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" width="75%">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="exampleModalLabel">Request</h3>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="http://miami.open.211.adopta.agency/images/loading.gif" id="loading" />
+                  <textarea id="response" style="overflow: auto; height: 5px; width: 100%; border: 0px solid #FFF;"></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <br />
+        </div>
+
+        <p class="large"></p>
+
+    </div>
+</section>
+<!--Documentation-->
 
               <footer>
   <p align="center">
