@@ -114,9 +114,11 @@ title: SEC Companies
           <tr>
             <td style="width: 50px;"></td>
             <td>
-              <table>
+              <table border="1">
                 {% for field in item.fields %}
                   <tr>
+                    <td>{{ field[0]}}</td>
+                    <td>{{ field[1]}}</td>
                     <td>{{ field}}</td>
                   </tr>
                 {% endfor %}
