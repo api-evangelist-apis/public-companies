@@ -38,18 +38,11 @@ title: SEC Companies
 
   <!--Begin Documentation-->
   {% if stop.name == 'Documentation' %}
-    IN DOCS!!<Br />
     {% for item in stop.items %}
-    HERE: {{ item.name }}<br />
       {% if item.name == 'Overview' %}
-        IN OVERVE!!!
-        {% assign fields = item.fields %}
-        {% for field in item.fields %}
-          field0: {{ field[0] }}<br />
-          {% assign documentation_overview_title = field.title %}
-          {% assign documentation_overview_header = field.header %}
-          {% assign documentation_overview_footer = field.footer %}
-        {% endfor %}
+        {% assign documentation_overview_title = item.fields | map: 'title' %}
+        {% assign documentation_overview_header = item.fields | map: 'header' %}
+        {% assign documentation_overview_footer = item.fields | map: 'footer' %}
       {% endif %}
 
     {% endfor %}
