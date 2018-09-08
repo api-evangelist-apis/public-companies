@@ -584,9 +584,22 @@ stops:
       - name: Overview
         description: An overview for the authentication of this service.
         instruction: Provide a location of the page that delivers an overview of this services authentication.
-        status: None
+        status: Active
         fields:
-          - url: http://example.com/authentication
+          - title: Authentication For The APIs
+          - header: This is the authentication for this API, providing you with the information you need to securely make API calls.
+          - footer: We try to keep API authentication as simple as possible, while also ensuring the data we provide is securely accessed.
+          - url: http://public.companies.apievangelist.com#authentication
+
+      - name: SignupLogin
+        description: An overview for the authentication of this service.
+        instruction: Provide a location of the page that delivers an overview of this services authentication.
+        status: Active
+        fields:
+          - title: Signing Up / Logging In For The API
+          - header: I don't make you sign up for yet another account, we just use your OAuth from your GitHub, Twitter, or LinkedIn.
+          - footer: I'm not interested in your data, and do not pull any other data from your accounts beyond the scaope requested.
+          - url: http://public.companies.apievangelist.com#sign-up-login
 
   #------------
   # Management

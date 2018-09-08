@@ -55,7 +55,32 @@ title: SEC Companies
     {% endfor %}
 
   {% endif %}
-  <!--End Definition-->
+  <!--End Documentation-->
+
+  <!--Begin Authentication-->
+  {% if stop.name == 'Authentication' %}
+    {% for item in stop.items %}
+
+      {% if item.name == 'Overview' %}
+
+        {% assign authentication_overview_title = item.fields | map: 'title' %}
+        {% assign authentication_overview_header = item.fields | map: 'header' %}
+        {% assign authentication_overview_footer = item.fields | map: 'footer' %}
+
+      {% endif %}
+
+      {% if item.name == 'SignupLogin' %}
+
+        {% assign authentication_signuplogin_title = item.fields | map: 'title' %}
+        {% assign authentication_signuplogin_header = item.fields | map: 'header' %}
+        {% assign authentication_signuplogin_footer = item.fields | map: 'footer' %}
+
+      {% endif %}
+
+    {% endfor %}
+
+  {% endif %}
+  <!--End Documentation-->
 
 {% endfor %}
 
@@ -73,9 +98,10 @@ title: SEC Companies
 <section id="sign-up-login">
   <div class="content">
 		<header>
-			<h3>Sign Up / Login</h3>
+			<h3>{{ authentication_signuplogin_title }}</h3>
 		</header>
-    <p class="large">We do not require you to signup for yet another account, rather just let you create your account and login using one of your existing social media accounts.</p>
+
+    <p class="large">{{ authentication_signuplogin_header }}</p>
 
     <div class="container">
       <div class="row">
@@ -95,34 +121,33 @@ title: SEC Companies
           <p>Login / Sign Up with your LinkedIn business social networking account.</p>
         </div>
     </div>
+
+    <p>{{ authentication_signuplogin_footer }}</p>
+
 </section>
 <!-- Signup / Signin -->
 
 <!--Auth-->
 <a name="authentication"></a>
-<section class="intro-features" id="authentication">
-    <div class="container wrapper-lg light-bg">
+<section id="authentication">
+  <div class="content">
+		<header>
+			<h3>{{ authentication_overview_title }}</h3>
+		</header>
 
-        <div class="row">
-            <div class="col-xs-12">
-                <h2 style="text-align:left;">{{ site.authentication_title }}</h2>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <p>{{ authentication_overview_header }}</p>
+          <ul id="auth-keys">
+            <li id="auth-appkey" style="padding-left: 25px;"><strong>&rarr; x-api-key</strong> - Your API key.</li>
+          </ul>
+          <p>{{ authentication_overview_footer }}</p>
         </div>
-
-        <div class="row">
-            <div class="col-lg-7" style="text-align:left;">
-
-                <p>{{ site.authentication_header }}</p>
-                <ul id="auth-keys">
-                  <li id="auth-appkey" style="padding-left: 25px;"><strong>&rarr; x-api-key</strong> - Your API key.</li>
-                </ul>
-                <p>{{ site.authentication_footer }}</p>
-
-            </div>
-            <div class="col-lg-5">
-              <center><img style="padding-top: 15px;" src="https://alpha-news-stream.github.io/portal2/assets/images/authentication.png" width="175" align="center" style="margin-bottom: 25px;" /></center>
-            </td>
-        </div>
+        <div class="col-lg-4">
+          <center><img style="padding-top: 15px;" src="https://alpha-news-stream.github.io/portal2/assets/images/authentication.png" width="175" align="center" style="margin-bottom: 25px;" /></center>
+        </td>
+      </div>
     </div>
 </section>
 <!--Auth-->
