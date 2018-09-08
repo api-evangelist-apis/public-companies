@@ -1254,9 +1254,32 @@
 
           <script type="text/javascript">
 
-            if(Cookies.get('app_key'))
+            $appid = getUrlVar('app_id');
+            //console.log($appid);
+            Cookies.set('app_id', $appid);
+            $appkey = getUrlVar('app_key');
+            //console.log($appkey);
+            Cookies.set('app_key', $appkey);
+            if($appkey != '')
               {
-              document.getElementById('x-api-key').value = Cookies.get('app_key');
+              $('#auth-keys').html('');
+              //$appid_link = '<li><strong>x-appid</strong> - ' + $appid + '</li>';
+              //console.log($appid_link)
+              $appkey_link = '<li><strong>x-appkey</strong> - ' + $appkey + '</li>';
+              //console.log($appkey_link)
+              $auth_html = '<ul>' + $appkey_link + '</ul>';
+              //console.log($auth_html);
+              $('#auth-keys').html($auth_html);
+              $('#auth-header').html('Authentication (AUTHENTICATED)');
+
+              //document.getElementById("x-api-key").style.display = '';
+              }
+
+            app_key = Cookies.get('app_key')
+
+            if(app_key != '')
+              {
+              document.getElementById('x-api-key').value = app_key;
               }
 
              function getRequest($slug,$path,$url)
