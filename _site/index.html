@@ -570,21 +570,21 @@
       <div class="row">
         <div class="col-4">
           <center>
-            <a href="http://oauth.apievangelist.com/github/?action=login"><img src="https://alpha-news-stream.github.io/portal2/assets/images/github-icon.png" width="50" /></a>
+            <a href="http://oauth.apievangelist.com/github/?action=login"><img src="/assets/images/github-icon.png" width="50" /></a>
             <h4>Github</h4>
             <p>Login with your Github social coding platform account.</p>
           </center>
         </div>
         <div class="col-4">
           <center>
-            <a href="http://oauth.apievangelist.com/twitter/?action=login"><img src="https://alpha-news-stream.github.io/portal2/assets/images/twitter-icon.png" width="50" /></a>
+            <a href="http://oauth.apievangelist.com/twitter/?action=login"><img src="/assets/images/twitter-icon.png" width="50" /></a>
             <h4>Twitter</h4>
             <p>Login / Sign Up with your Twitter social networking account.</p>
           </center>
         </div>
         <div class="col-4">
           <center>
-            <a href="http://oauth.apievangelist.com/linkedin/?action=login"><img src="https://alpha-news-stream.github.io/portal2/assets/images/linkedin-icon.png" width="50" /></a>
+            <a href="http://oauth.apievangelist.com/linkedin/?action=login"><img src="/assets/images/linkedin-icon.png" width="50" /></a>
             <h4>LinkedIn</h4>
             <p>Login / Sign Up with your LinkedIn business social networking account.</p>
           </center>
@@ -1306,7 +1306,7 @@
               if($anyparams == 1){ $api_url = $api_url + '?' + $query_string; }
 
               var $headers = {'x-api-key': $appkey};
-              console.log("header: " + $headers);
+              //console.log("header: " + $headers);
 
               var response = $.ajax({
                  url: $api_url,
@@ -1350,7 +1350,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <img src="http://miami.open.211.adopta.agency/images/loading.gif" id="loading" />
+                  <img src="/assets/images/loading.gif" id="loading" />
                   <textarea id="response" style="overflow: auto; height: 5px; width: 100%; border: 0px solid #FFF;"></textarea>
                 </div>
                 <div class="modal-footer">
