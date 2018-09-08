@@ -1,0 +1,118 @@
+---
+layout: default
+title: SEC Companies
+---
+
+<!--Definitions-->
+{% assign service_name = "" %}
+{% assign service_description = "" %}
+
+<!--Documentation-->
+{% assign documentation_overview_title = "" %}
+{% assign documentation_overview_header = ""  %}
+{% assign documentation_overview_footer = ""  %}
+
+{% for stop in site.stops %}
+
+  <!--Begin Definition-->
+  {% if stop.name == 'Definition' %}
+
+    {% for item in stop.items %}
+
+      {% if item.name == 'Service Name' %}
+        {% assign service_name = item.fields | map: 'service_name' %}
+      {% endif %}
+
+      {% if item.name == 'Service Description' %}
+        {% assign service_description = item.fields | map: 'service_description' %}
+      {% endif %}
+
+    {% endfor %}
+
+  {% endif %}
+  <!--End Definition-->
+
+  <!--Begin Documentation-->
+  {% if stop.name == 'Documentation' %}
+    {% for item in stop.items %}
+
+      {% if item.name == 'Overview' %}
+
+        {% assign documentation_overview_title = item.fields | map: 'title' %}
+        {% assign documentation_overview_header = item.fields | map: 'header' %}
+        {% assign documentation_overview_footer = item.fields | map: 'footer' %}
+
+      {% endif %}
+
+      {% if item.name == 'Schema' %}
+
+        {% assign documentation_schema_title = item.fields | map: 'title' %}
+        {% assign documentation_schema_header = item.fields | map: 'header' %}
+        {% assign documentation_schema_footer = item.fields | map: 'footer' %}
+
+      {% endif %}
+
+    {% endfor %}
+
+  {% endif %}
+  <!--End Documentation-->
+
+  <!--Begin Authentication-->
+  {% if stop.name == 'Authentication' %}
+    {% for item in stop.items %}
+
+      {% if item.name == 'Overview' %}
+
+        {% assign authentication_overview_title = item.fields | map: 'title' %}
+        {% assign authentication_overview_header = item.fields | map: 'header' %}
+        {% assign authentication_overview_footer = item.fields | map: 'footer' %}
+
+      {% endif %}
+
+      {% if item.name == 'SignupLogin' %}
+
+        {% assign authentication_signuplogin_title = item.fields | map: 'title' %}
+        {% assign authentication_signuplogin_header = item.fields | map: 'header' %}
+        {% assign authentication_signuplogin_footer = item.fields | map: 'footer' %}
+
+      {% endif %}
+
+    {% endfor %}
+
+  {% endif %}
+  <!--End Documentation-->
+
+{% endfor %}
+
+<!-- overview -->
+<section id="overview">
+	<div class="content">
+		<header>
+			<h3>{{ service_name }} Checklist</h3>
+		</header>
+		<p>This is the checklist.</p>
+	</div>
+</section>
+
+<!--Documentation-->
+<a name="documentation"></a>
+{% assign openapi = site.data.openapi %}
+
+<section id="documentation">
+  <div class="content">
+
+    <ul>
+    {% for stop in site.stops %}
+      <li>
+        {{ stop.name }}
+        <ul>
+          {% for item in stop.items %}
+            <li>{{ item.name }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+    </ul>
+
+  </div>
+</section>
