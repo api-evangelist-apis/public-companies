@@ -43,6 +43,7 @@ title: SEC Companies
 
       {% if item.name == 'Overview' %}
         {% for field in item.fields %}
+          field: {{ field }}<br />
           {% assign documentation_overview_title = field.title %}
           {% assign documentation_overview_header = field.header %}
           {% assign documentation_overview_footer = field.footer %}
