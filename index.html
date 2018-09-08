@@ -124,7 +124,7 @@ title: SEC Companies
             <p><strong>URL:</strong> <a href="{{ api_url }}{{ path[0] }}" target="_blank">{{ api_url }}{{ path[0] }}</a></p>
 
             <h4>Authentication:</h4>
-            <table cellpadding"3" cellspacing="2">
+            <table cellpadding"3" width="100%">
                 <tr>
                   <td align="right" width="18%" style="padding:5px;"><strong>x-api-key:</strong></td>
                   <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
@@ -138,7 +138,7 @@ title: SEC Companies
               {% if any_path_parameters == 1 %}
                 <h4>Path Parameters:</h4>
               {% endif %}
-              <table cellpadding"3">
+              <table cellpadding"3" width="100%">
               {% for parameter in parameters %}
                 {% if parameter.in == 'path' %}
                   <tr>
@@ -156,7 +156,7 @@ title: SEC Companies
               {% if any_path_parameters == 1 %}
                 <h4>Query Parameters:</h4>
               {% endif %}
-              <table cellpadding"3">
+              <table cellpadding"3" width="100%">
               {% for parameter in parameters %}
                 {% if parameter.in == 'query' %}
                   <tr>
@@ -169,7 +169,7 @@ title: SEC Companies
               </table>
             </form>
 
-            <table cellpadding"3">
+            <table cellpadding"3" width="100%">
                 <tr>
                   <td align="right" width="18%" style="padding:5px;"></td>
                   <td style="padding:5px;" width="25%"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="getRequest('{{ slug }}','{{ path[0] }}','{{ api_url }}');">Make API Request</button></td>
