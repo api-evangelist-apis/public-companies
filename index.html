@@ -128,7 +128,7 @@ title: SEC Companies
                   <strong>URL:</strong>
                   <table cellpadding"3" width="100%">
                       <tr>
-                        <td align="right" style="padding:5px; width: 12%;"></td>
+                        <td align="right" style="padding:5px; width: 15%;"></td>
                         <td colspan="2" style="padding:5px; width: 80%"><a href="{{ api_url }}{{ path[0] }}" target="_blank">{{ api_url }}{{ path[0] }}</a></td>
                       </tr>
                   </table>
@@ -136,7 +136,7 @@ title: SEC Companies
                   <strong>Authentication:</strong>
                   <table cellpadding"3" width="100%">
                       <tr>
-                        <td align="right" style="padding:5px; width: 12%;"><strong>x-api-key:</strong></td>
+                        <td align="right" style="padding:5px; width: 15%;"><strong>x-api-key:</strong></td>
                         <td style="padding:5px;" width="35%"><input type="text" name='x-api-key' id='x-api-key' value="" class="form-control" width="450"></td>
                         <td style="padding:5px;"></td>
                       </tr>
@@ -152,7 +152,7 @@ title: SEC Companies
                     {% for parameter in parameters %}
                       {% if parameter.in == 'path' %}
                         <tr>
-                          <td align="right" style="padding:5px; width: 12%;"><strong>{{ parameter.name }}:</strong></td>
+                          <td align="right" style="padding:5px; width: 15%;"><strong>{{ parameter.name }}:</strong></td>
                           <td style="padding:5px;" width="35%"><input type="text" name='{{ parameter.name | downcase }}' value="{{ parameter.default }}" class="form-control" style="width: 100%;"></td>
                           <td style="padding:5px;"><i>{{ parameter.description }}</i></td>
                         </tr>
@@ -171,7 +171,7 @@ title: SEC Companies
                     {% for parameter in parameters %}
                       {% if parameter.in == 'query' %}
                         <tr>
-                          <td align="right" style="padding:5px; width: 12%;"><strong>{{ parameter.name }}:</strong></td>
+                          <td align="right" style="padding:5px; width: 15%;"><strong>{{ parameter.name }}:</strong></td>
                           <td style="padding:5px;" width="25%"><input type="text" name='{{ parameter.name | downcase }}' value="{{ parameter.default }}" class="form-control" style="width: 100%;"></td>
                           <td style="padding:5px;"><i>{{ parameter.description }}</i></td>
                         </tr>
