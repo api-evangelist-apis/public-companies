@@ -109,7 +109,7 @@ title: SEC Companies
       {% for item in stop.items %}
         <tr>
           <td style="width: 50px;"></td>
-          <td><strong>{{ item.name }}</strong> ({{ item.status }}) - {{ item.instruction }}</td>
+          <td style="padding: 10px;"><strong>{{ item.name }}</strong> ({{ item.status }}) - {{ item.instruction }}</td>
         </tr>
           <tr>
             <td style="width: 50px;"></td>
@@ -121,8 +121,8 @@ title: SEC Companies
                     {% assign field_name = field[0] %}
                     {% assign field_label = field_name| replace: '_',' ' | capitalize %}
                     {% assign field_details = field[1] %}
-                    <td style="width: 10%;"></td>
-                    <td style="width: 20%; text-align: right;"><strong>{{ field_label }}:</strong></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 15%; text-align: right;"><strong>{{ field_label }}:</strong></td>
                     <td>
                       {% if field_details.first %}
                         ARRAY!!! - {{ field_details }}
