@@ -101,18 +101,19 @@ title: SEC Companies
 <section id="documentation">
   <div class="content">
 
-    <ul>
+    <table>
     {% for stop in site.stops %}
-      <li>
-        {{ stop.name }}
-        <ul>
-          {% for item in stop.items %}
-            <li>{{ item.name }}</li>
-          {% endfor %}
-        </ul>
-      </li>
+      <tr>
+        <td colspan="2">{{ stop.name }}</td>
+      </tr>
+      {% for item in stop.items %}
+        <tr>
+          <td style="width: 50px;"></td>
+          <td>{{ item.name }} - {{ item.instruction }}</td>
+        </tr>
+      {% endfor %}
     {% endfor %}
-    </ul>
+    </table>
 
   </div>
 </section>
