@@ -252,21 +252,27 @@ definitions:
       cik:
         type: integer
         maxLength: 11
+        description: The CIK for the company.
       street:
         type: string
         maxLength: 500
+        description: The street address for the business.
       city:
         type: string
         maxLength: 250
+        description: The city the company resides.
       state:
         type: string
         maxLength: 10
-      zipCode:
+        description: The state the company resides.
+      zip_code:
         type: string
         maxLength: 25
-      phoneNumber:
+        description: The zip code where the company resides.
+      phone_number:
         type: string
         maxLength: 10
+        description: The phone umber for the company.
     required:
     - cik
   former_name:
