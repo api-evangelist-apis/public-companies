@@ -823,6 +823,16 @@ stops:
         status: None
         fields:
           - enabled: true
+          - url: http://example.com/#documentation
+
+      - name: Overview
+        description: The descriptive header and footer paragraphs for the documentation.
+        instruction: Provide some content to introduce and close up the documentation.
+        status: Active
+        fields:
+          - title: 'API Documentation'
+          - header: 'This is the interactive API documentation for this API, and when you are authenticated, will allow you to make API calls, and see the responses for each API path.'
+          - footer: 'This documentation is generated from the OpenAPI definition for this API, which you can use to publish, syndicate, and integrate with this API documentation elsewhere.'
 
       - name: Examples
         description: Examples of using the API paths for this service.
@@ -830,6 +840,7 @@ stops:
         status: None
         fields:
           - enabled: true
+          - url: http://example.com/#examples
 
       - name: Definitions
         description: The API defined for use as part of this service.
@@ -837,6 +848,8 @@ stops:
         status: None
         fields:
           - enabled: true
+          - openapi: http://example.com/openapi/
+          - postman: http://example.com/postman/
 
       - name: Errors
         description: Details about the errors encountered using this service.

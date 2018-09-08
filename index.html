@@ -3,26 +3,57 @@ layout: default
 title: SEC Companies
 ---
 
+<!--Definitions-->
 {% assign service_name = "" %}
 {% assign service_description = "" %}
+
+<!--Documentation-->
+{% assign documentation_overview_title = ""  %}
+{% assign documentation_overview_header = ""  %}
+{% assign documentation_overview_footer = ""  %}
+
 {% for stop in site.stops %}
+
+  <!--Begin Definition-->
   {% if stop.name == 'Definition' %}
-  {% for item in stop.items %}
 
-    {% if item.name == 'Service Name' %}
-      {% for field in item.fields %}
-        {% assign service_name = field.service_name %}
-      {% endfor %}
-    {% endif %}
+    {% for item in stop.items %}
 
-    {% if item.name == 'Service Description' %}
-      {% for field in item.fields %}
-        {% assign service_description = field.service_description %}
-      {% endfor %}
-    {% endif %}
+      {% if item.name == 'Service Name' %}
+        {% for field in item.fields %}
+          {% assign service_name = field.service_name %}
+        {% endfor %}
+      {% endif %}
 
-  {% endfor %}
+      {% if item.name == 'Service Description' %}
+        {% for field in item.fields %}
+          {% assign service_description = field.service_description %}
+        {% endfor %}
+      {% endif %}
+
+    {% endfor %}
+
   {% endif %}
+  <!--End Definition-->
+
+  <!--Begin Documentation-->
+  {% if stop.name == 'Definition' %}
+
+    {% for item in stop.items %}
+
+      {% if item.name == 'Overview' %}
+        {% for field in item.fields %}
+          {% assign documentation_overview_title = field.title %}
+          {% assign documentation_overview_header = field.header %}
+          {% assign documentation_overview_footer = field.footer %}
+        {% endfor %}
+      {% endif %}
+
+    {% endfor %}
+
+  {% endif %}
+  <!--End Definition-->
+
 {% endfor %}
 
 <!-- overview -->
@@ -40,6 +71,11 @@ title: SEC Companies
 {% assign openapi = site.data.openapi %}
 
 <section class="intro-features" id="documentation">
+  <div class="content">
+		<header>
+			<h2>{{ documentation_overview_title }}</h2>
+		</header>
+		<p>{{ documentation_overview_header }}</p>
 
     {% assign taglist = '' %}
     {% for path in openapi.paths %}
@@ -89,7 +125,7 @@ title: SEC Companies
 
             {% assign slug = path[0] | replace: '/','' %}
 
-            <h3>{{ summary }}</h3>
+            <h4>{{ summary }}</h4>
             <p>{{ description }}</p>
             <p><strong>URL:</strong> <a href="{{ api_url }}{{ path[0] }}" target="_blank">{{ api_url }}{{ path[0] }}</a></p>
 
@@ -157,5 +193,8 @@ title: SEC Companies
 
     {% endfor %}
 
+    <p>{{ documentation_overview_footer }}</p>
+
+    </div>
 </section>
 <hr />
