@@ -143,7 +143,7 @@ stops:
     header: The API design strategy for use as part of this service.
     footer: Setting a consistent design strategy for all services.
     instructions: Establish a base set of design practices for the service.
-    status: None
+    status: Active
     items:
 
       - name: Versioning
@@ -161,52 +161,80 @@ stops:
       - name: Base Path
         description: The part of the path that goes after the host, and before each path, and is constant across all endpoints for this service.
         instruction: Set the base path for the service.
-        status: None
+        status: Active
+        fields:
+          - url: /v1
 
       - name: Path(s)
         description: The paths that are used to define each individual API resource.
         instruction: Define a set of resource paths for the service.
-        status: None
+        status: Active
+        fields:
+          - number_of_paths: 5
 
       - name: Verb(s)
         description: The HTTP verbs used for this service, including GET, POST, PUT, and DELETE.
         instruction: Define which HTTP, and other verbs will be used for the service.
-        status: None
+        status: Active
+        fields:
+          - get: 2
+          - post: 1
+          - put: 1
+          - delete: 1
 
       - name: Parameters
         description: The query parameters that are used by this service, as described by the OpenAPI.
         instruction: Define a list of query parameters in use to work with service.
-        status: None
+        status: Active
+        fields:
+          - number_of_parameters: 3
 
       - name: Headers
         description: The headers that are used by this service, as described by the OpenAPI.
         instruction: Define the HTTP Headers that will be used to work with the service.
-        status: None
+        status: Active
+        fields:
+          - number_of_headers: 0
 
       - name: Response(s)
         description: The responses that are used by this service, as described by the OpenAPI.
         instruction: Provide a resulting message and associated schema definition for the service.
-        status: None
+        status: Active
+        fields:
+          - number_of_headers: 5
 
       - name: Media Types
         description: The media types that are used by this service, as described by the OpenAPI.
         instruction: Define whether service will return CSV, JSON, and / or XML responses.
-        status: None
+        status: Active
+        fields:
+          - json: 5
+          - xml: 0
+          - html: 0
 
       - name: Status Codes
         description: The HTTP status codes that are used by this service, as described by the OpenAPI.
         instruction: Define the available HTTP status code for each responses.
-        status: None
+        status: Active
+        fields:
+          - 200: 5
+          - 300: 0
+          - 400: 0
+          - 500: 5
 
       - name: Pagination
         description: The pagination used by this service, as described by the OpenAPI.
         instruction: Define how pagination will be handled for requests and responses.
-        status: None
+        status: Active
+        fields:
+          - used: 1
 
       - name: Sorting
         description: The sorting used by this service, as described by the OpenAPI.
         instruction: Define how sorting will be handled for requests and responses.
-        status: None
+        status: Active
+        fields:
+          - used: 1
 
   #----------
   # Database
@@ -215,55 +243,55 @@ stops:
     header: The definitions for this service.
     footer:
     instructions: Establish the base for how data will be managed behind the service.
-    status: None
+    status: Active
     items:
 
       - name: Platform
         description: The database platform used to drive this service.
         instruction: Define which platform is in use to manage the database.
-        status: None
+        status: Active
         fields:
           - platform: Amazon RDS (Aurora)
 
       - name: Schema
         description: Making sure there is a database version of the schema.
         instruction: Establish the schema used for database based upon definition provided.
-        status: None
+        status: Active
         fields:
-          - schema: /path/tos/schema.sql
+          - schema: /sql/schema.sql
 
       - name: Location
         description: Where the database for this service is located.
         instruction: Define where the database is located that supports services.
-        status: None
+        status: Active
         fields:
-          - location: instance.id.region.rds.amazonaws.com
+          - location: laneworks-large
 
       - name: Access
         description: How the database is connected with by the service.
         instruction: Quantify how database access is provided behind the service.
-        status: None
+        status: Active
         fields:
           - access: ODBC
 
       - name: Logs
         description: Understanding how logging occurs for the database.
         instruction: Define where the database logs are located that support services.
-        status: None
+        status: Active
         fields:
           - logs: /rds
 
       - name: Backup
         description: Ensuring that the database has a backup strategy.
         instruction: Define the database backup process and location for service.
-        status: None
+        status: Active
         fields:
           - backup: /rds
 
       - name: Encryption
         description: Ensuring the encryption is part of the database operations.
         instruction: Define the encryption layer for the service database.
-        status: None
+        status: Active
         fields:
           - encryption: enabled
 
@@ -289,7 +317,8 @@ stops:
         instruction: Define where objects are stored behind the service.
         status: None
         fields:
-          - location: us-east
+          - region: us-east
+          - location: /api-evangelist-api-bucket/
 
       - name: Logs
         description: Information about the logging for storage behind service.
@@ -385,7 +414,7 @@ stops:
     header: The definitions for this service.
     footer:
     instructions: Provide a mock representation of this service.
-    status: None
+    status: Not Used
     items:
 
       - name: Paths
